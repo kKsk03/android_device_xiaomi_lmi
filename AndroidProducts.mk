@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_lmi.mk
+    $(LOCAL_DIR)/aosp_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_lmi-userdebug \
-    arrow_lmi-eng
+    aosp_lmi-userdebug \
+    aosp_lmi-eng
