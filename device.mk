@@ -318,10 +318,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# APN
-PRODUCT_PACKAGES += \
-    apns-conf.xml
-
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
