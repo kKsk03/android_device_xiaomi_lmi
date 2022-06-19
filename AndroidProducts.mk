@@ -5,8 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_lmi.mk
+    $(LOCAL_DIR)/kscope_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_lmi-userdebug \
-    aosp_lmi-eng
+    kscope_lmi-userdebug \
+    kscope_lmi-eng \
+    kscope_lmi-user

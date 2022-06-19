@@ -11,17 +11,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from lmi device
 $(call inherit-product, device/xiaomi/lmi/device.mk)
 
-# Inherit some common Pixel Experience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Kaleidoscope stuff.
+$(call inherit-product, vendor/kscope/config/mobile.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_lmi
+PRODUCT_NAME := kscope_lmi
 PRODUCT_DEVICE := lmi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi K30 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
-DEVICE_MAINTAINER := Alonzo Max
+DEVICE_MAINTAINER := Jackie
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
