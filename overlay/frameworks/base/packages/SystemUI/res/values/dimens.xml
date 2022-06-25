@@ -30,4 +30,13 @@
     
     <!-- With the large clock, move up slightly from the center -->
     <dimen name="keyguard_large_clock_top_margin">-152dp</dimen>
+ 
+    <!-- Physical buttons and fingerprint sensor location -->
+    <dimen name="keyguard_indication_margin_bottom_fingerprint_in_display">130dp</dimen>
+    <dimen name="kg_security_container_min_bottom_margin">725px</dimen>
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1655px</dimen>
+    <dimen name="physical_power_button_center_screen_location_y">980px</dimen>
+    <dimen name="physical_volume_down_button_center_screen_location_y">740px</dimen>
+    <dimen name="physical_volume_up_button_center_screen_location_y">550px</dimen>
+
 </resources>
