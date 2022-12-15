@@ -26,6 +26,7 @@ uint32_t getUdfpsZOrder(uint32_t z, bool touched) {
     return z;
 }
 
-uint64_t getUdfpsUsageBits(uint64_t usageBits, bool) {
+uint64_t getUdfpsUsageBits(uint64_t usageBits, bool touched) {
+    (void) touched;
     return usageBits;
 }

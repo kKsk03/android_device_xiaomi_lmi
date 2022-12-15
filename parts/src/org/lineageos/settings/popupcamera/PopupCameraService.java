@@ -69,8 +69,8 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private CameraManager.AvailabilityCallback availabilityCallback =
             new CameraManager.AvailabilityCallback() {
         @Override
-        public void onCameraClosed(@NonNull String cameraId) {
-            super.onCameraClosed(cameraId);
+        public void onCameraAvailable(@NonNull String cameraId) {
+            super.onCameraAvailable(cameraId);
             if (cameraId.equals(Constants.FRONT_CAMERA_ID)) {
                 mClosedEvent = SystemClock.elapsedRealtime();
                 if (SystemClock.elapsedRealtime() - mOpenEvent
@@ -84,8 +84,8 @@ public class PopupCameraService extends Service implements Handler.Callback {
         }
 
         @Override
-        public void onCameraOpened(@NonNull String cameraId, @NonNull String packageId) {
-            super.onCameraOpened(cameraId, packageId);
+        public void onCameraUnavailable(@NonNull String cameraId) {
+            super.onCameraAvailable(cameraId);
             if (cameraId.equals(Constants.FRONT_CAMERA_ID)) {
                 mOpenEvent = SystemClock.elapsedRealtime();
                 if (SystemClock.elapsedRealtime() - mClosedEvent
@@ -268,16 +268,16 @@ public class PopupCameraService extends Service implements Handler.Callback {
             int ledColor =
                 Integer.parseInt(mPopupCameraPreferences.getLEDColor());
             if (ledColor >= 4) {
-                FileUtils.writeLine(Constants.RED_LED_PATH, "1");
-                FileUtils.writeLine(Constants.RED_RIGHT_LED_PATH, "1");
+                FileUtils.writeLine(Constants.RED_LED_PATH, "255");
+                FileUtils.writeLine(Constants.RED_RIGHT_LED_PATH, "255");
             }
             if ((ledColor == 2) || (ledColor == 3) || (ledColor >=6)) {
-                FileUtils.writeLine(Constants.GREEN_LED_PATH, "1");
-                FileUtils.writeLine(Constants.GREEN_RIGHT_LED_PATH, "1");
+                FileUtils.writeLine(Constants.GREEN_LED_PATH, "255");
+                FileUtils.writeLine(Constants.GREEN_RIGHT_LED_PATH, "255");
             }
             if ((ledColor & 1) == 1) {
-                FileUtils.writeLine(Constants.BLUE_LED_PATH, "1");
-                FileUtils.writeLine(Constants.BLUE_RIGHT_LED_PATH, "1");
+                FileUtils.writeLine(Constants.BLUE_LED_PATH, "255");
+                FileUtils.writeLine(Constants.BLUE_RIGHT_LED_PATH, "255");
             }
 
             mHandler.postDelayed(() -> {

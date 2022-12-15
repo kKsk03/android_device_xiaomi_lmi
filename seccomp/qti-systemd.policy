@@ -77,4 +77,3 @@ dup3: 1
 getdents64: 1
 getsockname: 1
 recvfrom: 1
-madvise: 1
