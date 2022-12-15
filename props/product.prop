@@ -1,0 +1,16 @@
+# Audio
+af.fast_track_multiplier=1
+audio.deep_buffer.media=true
+audio.offload.min.duration.secs=30
+audio.offload.video=true
+ro.af.client_heap_size_kbyte=7168
+
+# Display
+debug.sf.frame_rate_multiple_threshold=81
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
+# Maintainer Info
+org.elixir.device=POCO F2 Pro
