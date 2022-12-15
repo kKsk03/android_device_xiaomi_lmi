@@ -14,9 +14,7 @@ $(call inherit-product, device/xiaomi/lmi/device.mk)
 # Inherit some common AOSP stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# Inherit some common Project Elixir stuff.
-ELIXIR_BUILD_TYPE := OFFICIAL
-ELIXIR_MAINTAINER := 家-|ZenkaBestia
+# Inherit some common stuff.
 EXTRA_UDFPS_ANIMATIONS := true
 IS_PHONE := true
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -27,9 +25,11 @@ TARGET_SUPPORTS_QUICK_TAP := true
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_lmi
 PRODUCT_DEVICE := lmi
-PRODUCT_BRAND := POCO
-PRODUCT_MODEL := POCO F2 Pro
+PRODUCT_BRAND := Redmi
+PRODUCT_MODEL := Redmi K30 Pro
 PRODUCT_MANUFACTURER := Xiaomi
+
+DEVICE_MAINTAINER := Alonzo Max
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
